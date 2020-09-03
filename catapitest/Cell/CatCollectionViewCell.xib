@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatCollectionViewCell" id="gTV-IL-0wX" customClass="CatCollectionViewCell" customModule="catapitest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="181" height="185"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="181" height="185"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fd9-zf-kLx">
+                        <rect key="frame" x="0.0" y="0.0" width="181" height="185"/>
+                    </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="86s-cJ-Bf8">
+                        <rect key="frame" x="80.5" y="82.5" width="20" height="20"/>
+                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fd9-zf-kLx" secondAttribute="trailing" id="FXb-kZ-PPb"/>
+                <constraint firstItem="fd9-zf-kLx" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PFf-yy-WZs"/>
+                <constraint firstAttribute="bottom" secondItem="fd9-zf-kLx" secondAttribute="bottom" id="ThI-7F-o0i"/>
+                <constraint firstItem="86s-cJ-Bf8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="dqQ-RE-bqY"/>
+                <constraint firstItem="86s-cJ-Bf8" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="dzE-g8-cKB"/>
+                <constraint firstItem="fd9-zf-kLx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oIK-2B-XyQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="181" height="185"/>
+            <connections>
+                <outlet property="activityIndicator" destination="86s-cJ-Bf8" id="3pH-Xd-rdp"/>
+                <outlet property="catImageView" destination="fd9-zf-kLx" id="lh1-zW-Jub"/>
+            </connections>
+            <point key="canvasLocation" x="232.60869565217394" y="187.16517857142856"/>
+        </collectionViewCell>
+    </objects>
+</document>
