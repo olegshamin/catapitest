@@ -46,7 +46,7 @@ class ListViewModel {
                 
             case .success(let cats):
                 self?.receivedCats += cats
-                self?.cats.onNext(self?.receivedCats ?? [])
+                self?.cats.onNext(cats)
                 
             case .failure(let error):
                 self?.error.onNext(error)

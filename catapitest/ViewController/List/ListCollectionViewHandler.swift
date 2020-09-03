@@ -20,7 +20,6 @@ class ListCollectionViewHandler: NSObject {
     // MARK: - Public properties
     
     weak var delegate: ListCollectionViewHandlerProtocol?
-    var cats = PublishSubject<[Cat]>()
     
     // MARK: - Private properties
     
@@ -34,7 +33,8 @@ class ListCollectionViewHandler: NSObject {
         return layout
     }()
     private let disposeBag = DisposeBag()
-    
+    private var cats = BehaviorRelay<[Cat]>(value: [])
+
     // MARK: - Setup
     
     func setup(
@@ -53,6 +53,10 @@ class ListCollectionViewHandler: NSObject {
         collectionView.register(loadingReusableNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "CollectionLoadingView")
         
         setupBinding(collectionView: collectionView)
+    }
+    
+    func add(_ items: [Cat]) {
+        cats.accept(cats.value + items)
     }
     
     // MARK: - Binding

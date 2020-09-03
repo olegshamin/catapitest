@@ -84,7 +84,7 @@ class ListViewController: BaseViewController {
             .cats
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] cats in
-                self?.collectionViewHandler.cats.onNext(cats)
+                self?.collectionViewHandler.add(cats)
                 
                 if self?.needToShowRandom == true {
                     self?.showRandomImage()
